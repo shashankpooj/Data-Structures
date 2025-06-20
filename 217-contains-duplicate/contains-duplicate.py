@@ -2,10 +2,11 @@ from collections import Counter
 class Solution:
 
     def containsDuplicate(self, nums: List[int]) -> bool:
-        freq=Counter(nums)
-        for key,value in freq.items():
-            if value>1:
+        hashset=set()
+        for n in nums:
+            if n in hashset:
                 return True
+            hashset.add(n)
         return False
         
             
