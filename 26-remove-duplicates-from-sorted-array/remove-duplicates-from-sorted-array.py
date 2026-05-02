@@ -4,10 +4,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        slow=0
-        for fast in range(1,len(nums)):
-            if nums[slow] !=nums[fast]:
-                slow+=1
-                nums[slow]=nums[fast]
-        return slow+1
+        i=0
+        j=i+1
+        while j<len(nums):
+            if nums[i]!=nums[j]:
+                nums[i+1]=nums[j]
+                i=i+1
+                j=j+1
+                continue
+            j=j+1
+        return i+1
         
