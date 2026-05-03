@@ -11,7 +11,8 @@ class Solution(object):
                 nums[i+1]=nums[j]
                 i=i+1
                 j=j+1
-                continue
-            j=j+1
+                # continue
+            else:
+                j=j+1
         return i+1
         
